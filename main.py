@@ -1,4 +1,19 @@
 from PIL import Image, ImageFont, ImageDraw
+import tkinter as tk
+
+def run_watermark():
+    text = entry.get()
+    print("Watermark:", text)  # later call your function
+
+root = tk.Tk()
+root.title("Watermark App")
+
+entry = tk.Entry(root)
+entry.pack()
+
+button = tk.Button(root, text="Add Watermark", command=run_watermark)
+button.pack()
+
 
 
 
@@ -40,6 +55,7 @@ def watermark_logo(input_path, logo_path):
     base.save("output_logo.png")
     base.show()
 
-# text = input("Enter the text\n")
-# watermark_text("random_img.jpg", text)
-watermark_logo("random_img.jpg","logo.png")
+
+
+
+root.mainloop()
