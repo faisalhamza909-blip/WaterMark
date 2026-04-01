@@ -1,0 +1,44 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS files (Windows)
+Thumbs.db
+Desktop.ini
+
+# Mac (just in case)
+.DS_Store
+
+# Logs
+*.log
+
+# Build / dist
+build/
+dist/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Testing / coverage
+.coverage
+htmlcov/
+
+# Misc
+*.sqlite3
+
