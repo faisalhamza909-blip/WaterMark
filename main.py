@@ -21,6 +21,25 @@ def watermark_text(input_path, text):
     img.save("output.png")
     img.show()
 
+def watermark_logo(input_path, logo_path):
+    base = Image.open(input_path).convert("RGBA")
+    logo = Image.open(logo_path).convert("RGBA")
 
-text = input("Enter the text\n")
-watermark_text("random_img.jpg", text)
+
+    logo = logo.resize((100, 100))
+
+    width, height = base.size
+    logo_width, logo_height = logo.size
+
+    x = width - logo_width - 10
+    y = height - logo_height - 10
+
+    # paste logo
+    base.paste(logo, (x, y), logo)
+
+    base.save("output_logo.png")
+    base.show()
+
+# text = input("Enter the text\n")
+# watermark_text("random_img.jpg", text)
+watermark_logo("random_img.jpg","logo.png")
